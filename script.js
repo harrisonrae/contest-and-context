@@ -1,3 +1,8 @@
+// When the entire page is loaded, show the content
+window.onload = function() {
+    document.body.style.display = 'block';
+}
+
 // Get all the text boxes
 const textBoxes = document.querySelectorAll('.text-box');
 
