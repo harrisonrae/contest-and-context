@@ -41,6 +41,35 @@
             box-sizing: border-box; /* Ensure padding doesn't cause overflow */
         }
 
+        .text-box-end {
+            position: absolute;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background-color: #fff;
+            border: 2px transparent #000;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
+        .text-box-final {
+            position: absolute;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            background-color: #fff;
+            border: 2px transparent #000;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
+
         .hidden {
             opacity: 0;
         }
@@ -50,8 +79,11 @@
 
     <div class="text-boxes">
         <div class="text-box">
-            My assessment is interested in exploring non-linear text. Please click anywhere to read the series of non-linear epistolary texts, written for myself and to myself about my topic fugitivity.
-            The order of the text is randomised by the website I've made. There should be 11 different texts to read so far
+            My draft work is interested in exploring non-linear text. Click anywhere to read the series of non-linear notes to myself. 
+           The order of the text is randomised by the website I've made. There should be 11 separate texts to read in this draft. 
+            They should be able to be read in any order.
+
+
         </div>
 
         <div class="text-box">
@@ -152,10 +184,20 @@
         I wrote about using primitive hypertext as a means to be unbound and infinitie. To be illegible. To make meaning in whichever way makes sense for me, and to be guided by that.
     
         </div>
-        
-        <div class="text-box">To be unbound is to be infinite. To be infinite is to be illegible.
+
+        <div class="text-box-final">
+            To be unbound is to be infinite. To be infinite is to be illegible.
             To be illegible is to be engaging in fugitivity. 
         </div>
+        
+        <div class="text-box-end">To be unbound is to be infinite. To be infinite is to be illegible.
+            To be illegible is to be engaging in fugitivity. 
+        </div>
+
+       
+
+      
+    </div>
     </div>
     <script src="script.js"></script>
 

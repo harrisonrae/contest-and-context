@@ -5,33 +5,57 @@ window.onload = function() {
 
 // Get all the text boxes
 const textBoxes = document.querySelectorAll('.text-box');
+const textBoxFinal = document.querySelector('.text-box-final'); // Target the final text box before the end
+const textBoxEnd = document.querySelector('.text-box-end'); // Target the final text box
 
-// Initialize a step counter
+// Hide text-box-final and text-box-end initially
+textBoxFinal.classList.add('hidden');
+textBoxEnd.classList.add('hidden');
+
+// Track which boxes have been shown
+let shownBoxes = new Set();
 let currentStep = 0;
 
-// Function to cycle through the text boxes in a specific order
+// Function to cycle through the text boxes
 function cycleTextBoxes() {
-    // Hide all text boxes
-    textBoxes.forEach(box => box.classList.add('hidden'));
+    // If all text boxes have been shown
+    if (shownBoxes.size === textBoxes.length) {
+        // Hide all text boxes first
+        textBoxes.forEach(box => box.classList.add('hidden'));
 
-    if (currentStep === 0) {
-        // Show the first text box (Text Box 1)
-        textBoxes[0].classList.remove('hidden');
-    } else if (currentStep === textBoxes.length - 1) {
-        // Show the last text box (Text Box 15)
-        textBoxes[textBoxes.length - 1].classList.remove('hidden');
+        // Show text-box-final
+        textBoxFinal.classList.remove('hidden');
+
+        // Wait for 3 seconds, then hide text-box-final and show text-box-end
+        setTimeout(() => {
+            textBoxFinal.classList.add('hidden'); // Hide final
+            textBoxEnd.classList.remove('hidden'); // Show end box
+        }, 3000); // Display final for 3 seconds
+        
+        // Disable further clicks
+        document.removeEventListener('click', cycleTextBoxes); 
     } else {
-        // Randomly pick a box from boxes 2 to 14
-        const randomIndex = Math.floor(Math.random() * (textBoxes.length - 2)) + 1;
+        // Hide all text boxes
+        textBoxes.forEach(box => box.classList.add('hidden'));
+
+        // Randomly pick a box that hasn't been shown yet
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * textBoxes.length);
+        } while (shownBoxes.has(randomIndex));
+
+        // Show the randomly picked box
         textBoxes[randomIndex].classList.remove('hidden');
+        shownBoxes.add(randomIndex);
+    }
+
+    // If it's the first step, show the first text box
+    if (currentStep === 0) {
+        textBoxes[0].classList.remove('hidden');
+        shownBoxes.add(0);
     }
 
     currentStep++;
-    
-    // Reset the step if the last box (15th) has been shown
-    if (currentStep >= textBoxes.length) {
-        currentStep = 0;
-    }
 }
 
 // Add an event listener to the document to change the text box on click
