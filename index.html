@@ -4,7 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Text Box Cycler</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+html, body {
+    height: 100%;
+    width: fit-content;
+    margin: 20px;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-boxes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text-box {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #fff;
+    border: 2px transparent #000;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+    </style>
 </head>
 <body>
 
