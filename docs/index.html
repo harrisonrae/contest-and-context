@@ -33,12 +33,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             background-color: #fff;
             border: 2px transparent #000;
             transition: opacity 0.5s ease;
             padding: 20px;
             box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+            flex-direction: column; /* Ensure the content flows vertically */
+    overflow-y: auto; /* Allow scrolling if content overflows vertically */
         }
 
         .text-box-end {
@@ -48,7 +50,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             background-color: #fff;
             border: 2px transparent #000;
             transition: opacity 0.5s ease;
@@ -62,7 +64,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 1.5rem;
             background-color: #fff;
             border: 2px transparent #000;
             transition: opacity 0.5s ease;
@@ -177,19 +179,16 @@
 
         <div class="text-box">
             
-           <p> 
-            Midway through 2024 I showed a sculptural work at a gallery. 
+           <p>Midway through 2024 I showed a sculptural work at a gallery. 
             The work was a cairn of sandstone, mirroring a cairn in Centennial Park erected for John Busby.
             My work continued a dialogue between local Government, Centennial Parklands group and myself.
             This dialogue started when I began tiling at the entrance of Busby's Bore in Centennial Park to contest the version of colonial history presenting Busby favourably with cairns, suburbs and ponds named after him.
            </p>
-           <p>
-            In celebrating Busby we are complicit in erasing histories of Sydney. Erasing the histories of the penal colony and their role in the construction and this heritage-listed work and over 40,000 years of Aboriginal sovereignty. 
+           <p> In celebrating Busby we are complicit in erasing histories of Sydney. Erasing the histories of the penal colony and their role in the construction and this heritage-listed work and over 40,000 years of Aboriginal sovereignty. 
             The cairn in the gallery was made up of found-sandstone (the material quarried by convicts for 10 years to create this tunnel) that I had found while tracing the map of Busby's bore from Centennial Park to Hyde Park. 
             The cairn of rocks stood in the gallery as a refusal of the attempts to valorise John Busby</p> . 
             
-            <p>
-                My intention was to create a counter-myth to muddy the story of Busby. A counter-myth to contradict the narrative being naturalised through the naming of places after Busby.
+            <p> My intention was to create a counter-myth to muddy the story of Busby. A counter-myth to contradict the narrative being naturalised through the naming of places after Busby.
                 With the fragments of archival materials I could find about the convicts, I was interested in using Saidiya Hartman's process of 'critical fabulations' for generative storytelling to manifest about 18th Century Sydney.
             </p>
         </div>
@@ -227,6 +226,7 @@
             It was important to me to be clear; sharp-edged like my favourite writers. 
             But a softness is needed to share this in any meaningful way. Softness and to not limit legibility.
         </div>
+        
 
 
         <div class="text-box">
