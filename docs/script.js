@@ -30,7 +30,7 @@ function cycleTextBoxes() {
         setTimeout(() => {
             textBoxFinal.classList.add('hidden'); // Hide final
             textBoxEnd.classList.remove('hidden'); // Show end box
-        }, 3000); // Display final for 3 seconds
+        }, 100000); // Display final for 3 seconds
         
         // Disable further clicks
         document.removeEventListener('click', cycleTextBoxes); 
