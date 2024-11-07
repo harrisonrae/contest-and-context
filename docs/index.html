@@ -71,9 +71,29 @@
             padding: 20px;
             box-sizing: border-box; /* Ensure padding doesn't cause overflow */
         }
+        .text-box-final {
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    gap: 15px; /* Space between each paragraph */
+}
+
 
         .hidden {
             opacity: 0;
+
+            /* Base styling for desktop (no scrolling) */
+.box {
+    overflow: hidden; /* Disable scrolling on desktop */
+}
+
+/* Enable scrolling on mobile devices */
+@media (max-width: 600px) {
+    .box {
+        overflow-y: auto; /* Enable vertical scrolling on mobile */
+        max-height: 90vh; /* Adjust this to limit the container height */
+    }
+}
+
 
             /* Responsive adjustments for mobile devices */
 @media (max-width: 600px) {
@@ -287,7 +307,10 @@
             So I'm still negotiatiating the state. We are all negotiating with the state. I need to find my own methods for subversion for me to feel untethered.
                         
             I’m asking myself to imagine a life where I'm not contained within classifications. Fugitivity is one embodied strategy to refuse legibility. 
-            
+            <p>
+                <p>
+
+                </p>
             To be unbound, to be infinite, to be illegible.
             
  
