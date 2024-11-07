@@ -7,59 +7,137 @@
           <style>
        
 
-       html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+
+
+        /* Ensure full-screen fit */
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto; 
+            overflow-x: hidden;
+        }
+
+        .text-boxes {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text-box {
+            position: absolute;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background-color: #fff;
+            border: 2px transparent #000;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+            flex-direction: column; /* Ensure the content flows vertically */
+    overflow-y: auto; /* Allow scrolling if content overflows vertically */
+    
+        }
+
+        .text-box-end {
+            position: absolute;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background-color: #fff;
+            margin: auto;
+            border: 2px transparent #000;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
+        .text-box-final {
+            position: absolute;
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size: 1.5rem;
+            background-color: #fff;
+            border: 2px transparent #000;
+            transition: opacity 0.5s ease;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+                     
+        }
+        .text-box-final {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow-x: hidden;
+    flex-direction: column; /* Stack paragraphs vertically */
+    margin: auto;
+   
 }
 
-.text-boxes {
-    position: relative;
-    width: 100%;
-    height: 100%;
+
+        .hidden {
+            opacity: 0;
+
+            /* Base styling for desktop (no scrolling) */
+.box {
+    overflow: hidden; /* Disable scrolling on desktop */
 }
 
-/* Base styling for text boxes */
-.text-box, .text-box-final, .text-box-end {
-    position: absolute;
-    width: 100vw;
-    max-height: 90vh; /* Limit height to allow some space on top and bottom */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-size: 1.5rem;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: auto; /* Enable scrolling if content overflows */
-    transition: opacity 0.5s ease;
-}
 
-/* Responsive adjustments for mobile */
+
+    
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .text-box, .text-box-final, .text-box-end {
-        font-size: 0.9rem;
-        padding: 10vh 5vw; /* Space around text to prevent clipping */
+        overflow-y: auto; /* Enable scrolling for longer paragraphs */
+        padding-top: 15vh; /* Extra space at the top for readability */
+        padding-bottom: 5vh;
+        font-size: 0.5rem; /* Reduce font size for smaller screens */
+        max-height: fit-content; /* Limit height to fit smaller screens */
     }
 }
 
+/* For even smaller screens */
 @media (max-width: 400px) {
     .text-box, .text-box-final, .text-box-end {
-        font-size: 0.8rem;
-        padding: 5vh 5vw; /* Slightly smaller padding on extra-small screens */
+        font-size: 0.5rem;
+        padding-top: 10vh; /* Top padding adjusted for small screens */
+        padding-bottom: 10vh;
+        max-height: fit-content;
     }
 }
-</style>
 
 
-     
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+
 </head>
 
 
