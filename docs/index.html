@@ -11,13 +11,14 @@
         html, body {
             height: 100%;
             width: 100%;
-            margin: 0;
-            padding: 0;
+            margin: auto;
+            padding: 20;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden; /* Prevent scrolling */
+            overflow-y: auto; /* Prevent scrolling */
+            overflow-x: hidden;
         }
 
         .text-boxes {
@@ -41,6 +42,7 @@
             box-sizing: border-box; /* Ensure padding doesn't cause overflow */
             flex-direction: column; /* Ensure the content flows vertically */
     overflow-y: auto; /* Allow scrolling if content overflows vertically */
+    
         }
 
         .text-box-end {
@@ -52,6 +54,7 @@
             justify-content: center;
             font-size: 1.5rem;
             background-color: #fff;
+            margin: auto;
             border: 2px transparent #000;
             transition: opacity 0.5s ease;
             padding: 20px;
@@ -64,17 +67,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin: auto;
             font-size: 1.5rem;
             background-color: #fff;
             border: 2px transparent #000;
             transition: opacity 0.5s ease;
             padding: 20px;
             box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+                     
         }
         .text-box-final {
     display: flex;
     flex-direction: column; /* Stack paragraphs vertically */
-    gap: 15px; /* Space between each paragraph */
+    margin: auto;
+   
 }
 
 
