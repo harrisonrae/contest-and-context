@@ -98,32 +98,26 @@
 }
 
 
+
+    
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    /* Enable scrolling on the entire container */
-    .text-boxes {
-        overflow-y: auto; /* Vertical scroll for mobile */
-        box-sizing: auto;
-        position: relative;
-    }
-    
+    /* Allow scrolling within each text box */
     .text-box, .text-box-final, .text-box-end {
-        overflow-y: auto; /* Enable scroll within each box */
+        overflow-y: auto; /* Enable scrolling for longer paragraphs */
         font-size: 0.9rem; /* Adjust font size for smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
-        box-sizing: auto;
-        position: relative; }
+        max-height: 90vh; /* Max height for mobile */
+        padding: 10px; /* Adjust padding */
+    }
 }
 
 /* Smaller screens (phone) */
 @media (max-width: 400px) {
     .text-box, .text-box-final, .text-box-end {
         font-size: 0.75rem;
-        box-sizing: auto;
-        position: relative; }
+    }
 }
 
-        }
     </style>
 </head>
 <body>
