@@ -105,16 +105,18 @@
     /* Allow scrolling within each text box */
     .text-box, .text-box-final, .text-box-end {
         overflow-y: auto; /* Enable scrolling for longer paragraphs */
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        font-size: 0.5rem; /* Adjust font size for smaller screens */
         max-height: 90vh; /* Max height for mobile */
         padding: 10px; /* Adjust padding */
+        box-sizing: content-box;
     }
 }
 
 /* Smaller screens (phone) */
 @media (max-width: 400px) {
     .text-box, .text-box-final, .text-box-end {
-        font-size: 0.75rem;
+        font-size: 0.5rem;
+        box-sizing: content-box;
     }
 }
 
