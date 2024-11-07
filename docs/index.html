@@ -7,22 +7,27 @@
           <style>
        
 
+
+
+/* old code belowv*/
+
+
         /* Ensure full-screen fit */
         html, body {
             height: 100%;
             width: 100%;
-            margin: auto;
-            padding: 20;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow-y: auto; /* Prevent scrolling */
+            overflow-y: auto; 
             overflow-x: hidden;
         }
 
         .text-boxes {
-            position: absolute;
+            position: relative;
             width: 100%;
             height: 100%;
         }
@@ -92,51 +97,28 @@
     overflow: hidden; /* Disable scrolling on desktop */
 }
 
-/* Enable scrolling on mobile devices */
-@media (max-width: 600px) {
-    .box {
-        overflow-y: auto; /* Enable vertical scrolling on mobile */
-        max-height: 90vh; /* Adjust this to limit the container height */
-    }
-}
 
-
-            /* Responsive adjustments for mobile devices */
-@media (max-width: 600px) {
-    .text-box, .text-box-final, .text-box-end {
-        font-size: 0.6rem; /* Smaller font size for mobile */
-        padding: 10px; /* Adjust padding */
-    }
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-/* justadded this */
-.text-box-final {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Space between paragraphs */
-    overflow-y: hidden; /* Hide scroll on desktop */
-}
-
-/* Enable vertical stacking and scrolling on mobile */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-    .text-box-final {
-        overflow-y: auto; /* Enable scroll on mobile */
-        max-height: 90vh; /* Maintain height consistency */
+    /* Enable scrolling on the entire container */
+    .text-boxes {
+        overflow-y: auto; /* Vertical scroll for mobile */
+    }
+    
+    .text-box, .text-box-final, .text-box-end {
+        overflow-y: auto; /* Enable scroll within each box */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 }
- 
 
-
+/* Smaller screens (phone) */
 @media (max-width: 400px) {
     .text-box, .text-box-final, .text-box-end {
-        font-size: 0.5rem; /* Further reduce font size for very small screens */
-        padding: 10px;
+        font-size: 0.75rem;
     }
 }
+
         }
     </style>
 </head>
