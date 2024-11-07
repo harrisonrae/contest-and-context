@@ -103,6 +103,28 @@
     }
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+/* justadded this */
+.text-box-final {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between paragraphs */
+    overflow-y: hidden; /* Hide scroll on desktop */
+}
+
+/* Enable vertical stacking and scrolling on mobile */
+@media (max-width: 768px) {
+    .text-box-final {
+        overflow-y: auto; /* Enable scroll on mobile */
+        max-height: 90vh; /* Maintain height consistency */
+    }
+}
+ 
+
+
 @media (max-width: 400px) {
     .text-box, .text-box-final, .text-box-end {
         font-size: 0.5rem; /* Further reduce font size for very small screens */
