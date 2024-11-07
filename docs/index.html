@@ -104,20 +104,23 @@
     .text-boxes {
         overflow-y: auto; /* Vertical scroll for mobile */
         box-sizing: auto;
+        position: relative;
     }
     
     .text-box, .text-box-final, .text-box-end {
         overflow-y: auto; /* Enable scroll within each box */
         font-size: 0.9rem; /* Adjust font size for smaller screens */
         padding: 10px; /* Adjust padding for smaller screens */
-    }
+        box-sizing: auto;
+        position: relative; }
 }
 
 /* Smaller screens (phone) */
 @media (max-width: 400px) {
     .text-box, .text-box-final, .text-box-end {
         font-size: 0.75rem;
-    }
+        box-sizing: auto;
+        position: relative; }
 }
 
         }
